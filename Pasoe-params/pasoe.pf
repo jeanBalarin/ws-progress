@@ -1,0 +1,27 @@
+#-debugalert
+#-clientlog x:\ems\clientlog.txt
+#-logginglevel 4
+#-logentrytypes 4GLMessages,4GLTrace:2,DB.Connects:3,DynObjects.DB:4,DynObjects.XML:5,DynObjects.Other:6,DynObjects.CLASS:7,DynObjects.UI:8,FileID:9,ProEvents.UI.CHAR:10,ProEvents.UI.COMMAND:11,ProEvents.Other:12,SAX:13
+#-y
+#-yc
+#-yx
+
+-l 50000
+-mmax 50000
+-s 20000
+-TB 31
+-TM 32
+-d dmy
+-Bt 10000
+-tmpbsize 8
+-Mm 4096
+-cpstream ibm850
+#-q
+-h 100
+-numsep 46
+-numdec 44
+
+ -db C:\OpenEdge\WRK\db\sports2020.db -H localhost -S 50001 -ld sports2020
+
+
+

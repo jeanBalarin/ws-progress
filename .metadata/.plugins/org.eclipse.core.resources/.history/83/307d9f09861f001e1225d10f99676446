@@ -1,0 +1,159 @@
+@openapi.openedge.export FILE(type="REST", executionMode="single-run", useReturnValue="false", writeDataSetBeforeImage="false").
+
+/*------------------------------------------------------------------------
+    File        : customerController.p
+    Purpose     : 
+
+    Syntax      :
+
+    Description : 
+
+    Author(s)   : franc
+    Created     : Mon Jul 10 20:52:56 BRT 2023
+    Notes       :
+  ----------------------------------------------------------------------*/
+
+/* ***************************  Definitions  ************************** */
+
+BLOCK-LEVEL ON ERROR UNDO, THROW.
+{include/customer.i}
+/* ********************  Preprocessor Definitions  ******************** */
+
+
+/* ***************************  Main Block  *************************** */
+
+@openapi.openedge.export(type="REST", useReturnValue="false", writeDataSetBeforeImage="false").
+PROCEDURE pFindAll:
+    DEFINE OUTPUT PARAMETER DATASET FOR dsCustomer. // temporary table for data output
+    DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER  NO-UNDO.
+    DEFINE VARIABLE hService AS HANDLE NO-UNDO.
+    
+    DO ON ERROR UNDO, LEAVE:
+        RUN service/customerService.p PERSISTENT SET hService.
+        IF VALID-HANDLE(hService) THEN DO:
+            RUN pFindAllCustomer IN hService (INPUT DATASET dsCustomer, OUTPUT iCodeStatus).
+        END.
+        ELSE DO:
+            CREATE ttErro.
+            ASSIGN
+                ttErro.msg = 'Erro ao executar chamada a rotina de consulta'
+                ttErro.success = FALSE.
+        END.
+        FINALLY:
+            IF VALID-HANDLE(hService) THEN DELETE PROCEDURE hService.    
+        END FINALLY.
+    END.
+END.
+
+@openapi.openedge.export(type="REST", useReturnValue="false", writeDataSetBeforeImage="false").
+PROCEDURE findByID:
+    DEFINE INPUT PARAMETER Codigo AS INTEGER NO-UNDO.
+    DEFINE OUTPUT PARAMETER DATASET FOR dsCustomer. // temporary table for data output
+    DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER  NO-UNDO.
+    DEFINE VARIABLE hService AS HANDLE NO-UNDO.
+    
+    DO ON ERROR UNDO, LEAVE:
+        RUN service/customerService.p PERSISTENT SET hService.
+        IF VALID-HANDLE(hService) THEN 
+        DO:
+            RUN findByIdCustomer IN hService (INPUT DATASET dsCustomer, OUTPUT iCodeStatus).
+        END.
+        ELSE 
+        DO:
+            CREATE ttErro.
+            ASSIGN
+                ttErro.msg     = 'Erro ao executar chamada a rotina de consulta'
+                ttErro.success = FALSE.
+        END.
+        FINALLY:
+            IF VALID-HANDLE(hService) THEN DELETE PROCEDURE hService.    
+        END FINALLY.
+    END.
+END PROCEDURE.
+
+PROCEDURE pCreate:
+    DEFINE INPUT  PARAMETER TABLE FOR ttNewCustomer.
+    DEFINE OUTPUT PARAMETER DATASET FOR dsCustomer.
+    DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER NO-UNDO.
+    DEFINE VARIABLE hService AS HANDLE NO-UNDO.
+    
+    DO ON ERROR UNDO, LEAVE:
+        RUN service/customerService.p PERSISTENT SET hService.
+        IF VALID-HANDLE(hService) THEN 
+        DO:
+            RUN pCreateCustomer IN hService (   INPUT TABLE ttNewCustomer,
+                                                INPUT DATASET dsCustomer, 
+                                                OUTPUT iCodeStatus).
+        END.
+        ELSE 
+        DO:
+            CREATE ttErro.
+            ASSIGN
+                ttErro.msg     = 'Erro ao executar chamada a rotina de Criação'
+                ttErro.success = FALSE.
+        END.
+        FINALLY:
+            IF VALID-HANDLE(hService) THEN DELETE PROCEDURE hService.    
+        END FINALLY.
+    END.
+END PROCEDURE.
+
+PROCEDURE pUpdate:
+    DEFINE INPUT PARAMETER iCode AS INTEGER NO-UNDO.
+    DEFINE INPUT  PARAMETER TABLE FOR ttNewCustomer.
+    DEFINE OUTPUT PARAMETER DATASET FOR dsCustomer.
+    DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER NO-UNDO.
+    DEFINE VARIABLE hService AS HANDLE NO-UNDO.
+    
+    DO ON ERROR UNDO, LEAVE:
+        RUN service/customerService.p PERSISTENT SET hService.
+        IF VALID-HANDLE(hService) THEN 
+        DO:
+            RUN pUpdateCustomer IN hService (   INPUT iCode,
+                                                INPUT TABLE ttNewCustomer,
+                                                INPUT DATASET dsCustomer, 
+                                                OUTPUT iCodeStatus).
+        END.
+        ELSE 
+        DO:
+            CREATE ttErro.
+            ASSIGN
+                ttErro.msg     = 'Erro ao executar chamada a rotina de Alteração'
+                ttErro.success = FALSE.
+        END.
+        FINALLY:
+            IF VALID-HANDLE(hService) THEN DELETE PROCEDURE hService.    
+        END FINALLY.
+    END.
+END PROCEDURE.
+
+PROCEDURE pDelete:
+    DEFINE INPUT PARAMETER iCode AS INTEGER NO-UNDO.
+    DEFINE OUTPUT PARAMETER DATASET FOR dsCustomer.
+    DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER NO-UNDO.
+    DEFINE VARIABLE hService AS HANDLE NO-UNDO.
+    
+    DO ON ERROR UNDO, LEAVE:
+        RUN service/customerService.p PERSISTENT SET hService.
+        IF VALID-HANDLE(hService) THEN 
+        DO:
+            RUN pDeleteCustomer IN hService (
+                    INPUT iCode,
+                    INPUT DATASET dsCustomer, 
+                    OUTPUT iCodeStatus
+                ).
+        END.
+        ELSE 
+        DO:
+            CREATE ttErro.
+            ASSIGN
+                ttErro.msg     = 'Erro ao executar chamada a rotina de exclusão'
+                ttErro.success = FALSE.
+        END.
+        FINALLY:
+            IF VALID-HANDLE(hService) THEN DELETE PROCEDURE hService.    
+        END FINALLY.
+    END.
+END PROCEDURE.
+
+    

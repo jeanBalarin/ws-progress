@@ -1,0 +1,292 @@
+PSC-SchemaCache|Tue Mar 17 22:09:13 2020|11.5.0
+Benefitstable
+Benefits.DependentCare04Dependent Care0070
+Benefits.EmpNum04Emp No0010
+Benefits.HealthCare01Health Care020
+Benefits.LifeInsurance04Life Insurance0030
+Benefits.MedicalSpending04Medical Spending0060
+Benefits.Pension401K04Pension401K0040
+Benefits.StockPurchase04Stock Purchase0050
+Benefits.EmpNoindextruetrue1EmpNumtrue
+BillTotable
+BillTo.Address01Address040
+BillTo.Address201Address2050
+BillTo.BillToID04BillToID0020
+BillTo.City01City060
+BillTo.Contact01Contact090
+BillTo.CustNum04Cust Num0010
+BillTo.Name01Name030
+BillTo.Phone01Phone0100
+BillTo.PostalCode01Postal Code080
+BillTo.State01State070
+BillTo.CustNumBillToindextruetrue2CustNumtrueBillToIDtrue
+Bintable
+Bin.BinName01Bin Name050
+Bin.BinNum04Bin Num0040
+Bin.ItemNum04Item Num0020
+Bin.Qty04Qty0030
+Bin.WarehouseNum04Warehouse Num0010
+Bin.BinNumindextruetrue1BinNumtrue
+Bin.ItemNumindexfalsefalse1ItemNumtrue
+Bin.WarehouseNumItemNumindexfalsefalse2WarehouseNumtrueItemNumtrue
+Customertable
+Customer.Address01Address040
+Customer.Address201Address2050
+Customer.Balance05Balance00140
+Customer.City01City060
+Customer.Comments01Comments0180
+Customer.Contact01Contact0110
+Customer.Country01CountryUSA015
+Customer.CreditLimit05Credit Limit15000130
+Customer.CustNum04Cust Num0010
+Customer.Discount04Discount00170
+Customer.EmailAddress01Email0200
+Customer.Fax01Fax0190
+Customer.Name01Name030
+Customer.Phone01Phone0115
+Customer.PostalCode01Postal Code080
+Customer.SalesRep01Sales Rep0125
+Customer.State01State070
+Customer.Terms01TermsNet300150
+Customer.Commentsindexfalsefalse1Commentstrue
+Customer.CountryPostindexfalsefalse2CountrytruePostalCodetrue
+Customer.CustNumindextruetrue1CustNumtrue
+Customer.Nameindexfalsefalse1Nametrue
+Customer.SalesRepindexfalsefalse1SalesReptrue
+Departmenttable
+Department.DeptCode01Dept Code010
+Department.DeptName01Dept Name020
+Department.DeptCodeindextruetrue1DeptCodetrue
+Employeetable
+Employee.Address01Address030
+Employee.Address201Address2040
+Employee.BirthDate02Birthdatenull097
+Employee.City01City050
+Employee.DeptCode01Dept Code080
+Employee.EmpNum04Emp No005
+Employee.FirstName01First Name020
+Employee.HomePhone01Home Phone075
+Employee.LastName01Last Name010
+Employee.Position01Position090
+Employee.PostalCode01Postal Code070
+Employee.SickDaysLeft04Sick Days Left00110
+Employee.StartDate02Start Datenull098
+Employee.State01State060
+Employee.VacationDaysLeft04Vacation Days Left00100
+Employee.WorkPhone01Work Phone076
+Employee.DeptCodeindexfalsefalse1DeptCodetrue
+Employee.EmpNoindextruetrue1EmpNumtrue
+Employee.Nameindextruefalse2LastNametrueFirstNametrue
+Familytable
+Family.BenefitDate02Benefit Datenull040
+Family.BirthDate02BirthDatenull030
+Family.CoveredOnBenefits03Covered On Benefitsno035
+Family.EmpNum04Emp No005
+Family.Relation01Relation020
+Family.RelativeName01Relative Name010
+Family.EmpNoRelativeNameindextruetrue2EmpNumtrueRelativeNametrue
+Feedbacktable
+Feedback.Comments01Comments060
+Feedback.Company01Company020
+Feedback.Contact01Contact Name010
+Feedback.Department01Department070
+Feedback.EmailAddress01Email030
+Feedback.Fax01Fax050
+Feedback.Phone01Phone040
+Feedback.Rating04Rating0080
+Feedback.Commentsindexfalsefalse1Commentstrue
+Feedback.Companyindexfalsefalse1Companytrue
+Feedback.Contactindexfalsefalse1Contacttrue
+Feedback.Departmentindexfalsetrue1Departmenttrue
+Feedback.Ratingindexfalsefalse1Ratingtrue
+InventoryTranstable
+InventoryTrans.BinNum04Bin Num0030
+InventoryTrans.InvTransNum04Inventory Trans Num0010
+InventoryTrans.InvType01Type070
+InventoryTrans.ItemNum04Item Num0050
+InventoryTrans.OrderNum04Order Num0090
+InventoryTrans.PONum04PO Num0080
+InventoryTrans.Qty04Qty0040
+InventoryTrans.TransDate02Trans Datenull060
+InventoryTrans.TransTime01Trans Time0100
+InventoryTrans.WarehouseNum04Warehouse Num0020
+InventoryTrans.InvTransNumindexfalsetrue1InvTransNumtrue
+Invoicetable
+Invoice.Adjustment05Adjustment0060
+Invoice.Amount05Amount0040
+Invoice.CustNum04Cust Num0020
+Invoice.InvoiceDate02Invoice Datenull030
+Invoice.Invoicenum04Invoice Num0010
+Invoice.OrderNum04Order Num0080
+Invoice.ShipCharge05Ship Charge00120
+Invoice.TotalPaid05Total Paid0050
+Invoice.CustNumindexfalsefalse1CustNumtrue
+Invoice.InvoiceDateindexfalsefalse1InvoiceDatetrue
+Invoice.InvoiceNumindextruetrue1Invoicenumtrue
+Invoice.OrderNumindexfalsefalse1OrderNumtrue
+Itemtable
+Item.Allocated04Allocated0050
+Item.CatDescription01Cat-Description090
+Item.Category101Category10100
+Item.Category201Category20110
+Item.CatPage04Cat Page0080
+Item.ItemImage018nullnull0150
+Item.ItemName01Item Name020
+Item.ItemNum04Item Num0010
+Item.MinQty04Min Qty00140
+Item.OnHand04On Hand0040
+Item.OnOrder04On Order0070
+Item.Price05Price0030
+Item.ReOrder04Re Order0060
+Item.Special01Special0120
+Item.Weight05Weight00130
+Item.CatDescriptionindexfalsefalse1CatDescriptiontrue
+Item.Category2ItemNameindexfalsefalse2Category2trueItemNametrue
+Item.CategoryItemNameindexfalsefalse2Category1trueItemNametrue
+Item.ItemNameindexfalsefalse1ItemNametrue
+Item.ItemNumindextruetrue1ItemNumtrue
+LocalDefaulttable
+LocalDefault.Country01Country010
+LocalDefault.CurrencySymbol01Currency Symbol070
+LocalDefault.DateFormat01Date FormatMDY080
+LocalDefault.LocalDefNum04Local Default Num0090
+LocalDefault.PostalFormat01Postal Format050
+LocalDefault.PostalLabel01Postal Label040
+LocalDefault.Region1Label01Region1 Label020
+LocalDefault.Region2Label01Region2 Label030
+LocalDefault.TelFormat01Tel Format060
+LocalDefault.LocalDefNumindextruetrue1LocalDefNumtrue
+Ordertable
+Order.BillToID04Bill To ID00170
+Order.Carrier01Carrier0120
+Order.CreditCard01Credit CardVisa0210
+Order.CustNum04Cust Num0020
+Order.Instructions01Instructions0130
+Order.OrderDate02OrderedTODAY090
+Order.OrderNum04Order Num0010
+Order.OrderStatus01Order StatusOrdered0190
+Order.PO01PO0140
+Order.PromiseDate02Promisednull0110
+Order.SalesRep01Sales Rep0160
+Order.ShipDate02Shippednull0100
+Order.ShipToID04Ship To ID00180
+Order.Terms01TermsNet300150
+Order.WarehouseNum04Warehouse Num00200
+Order.CustOrderindextruefalse2CustNumtrueOrderNumtrue
+Order.OrderDateindexfalsefalse1OrderDatetrue
+Order.OrderNumindextruetrue1OrderNumtrue
+Order.OrderStatusindexfalsefalse1OrderStatustrue
+Order.SalesRepindexfalsefalse1SalesReptrue
+OrderLinetable
+OrderLine.Discount04Discount0070
+OrderLine.ExtendedPrice05Extended Price0080
+OrderLine.ItemNum04Item Num0030
+OrderLine.LineNum04Line Num0020
+OrderLine.OrderLineStatus01Order Line StatusOrdered0110
+OrderLine.OrderNum04Order Num0010
+OrderLine.Price05Price0040
+OrderLine.Qty04Qty0050
+OrderLine.ItemNumindexfalsefalse1ItemNumtrue
+OrderLine.OrderLineindextruetrue2OrderNumtrueLineNumtrue
+OrderLine.OrderLineStatusindexfalsefalse1OrderLineStatustrue
+POLinetable
+POLine.Discount04Discount0070
+POLine.ExtendedPrice05Extended Price0080
+POLine.ItemNum04Item Num0030
+POLine.LineNum04Line Num0020
+POLine.POLineStatus01PO Line StatusOrdered0100
+POLine.PONum04Order Num0090
+POLine.Price05Price0040
+POLine.Qty04Qty0050
+POLine.PONumLineNumindextruetrue2PONumtrueLineNumtrue
+PurchaseOrdertable
+PurchaseOrder.DateEntered02Date Enterednull020
+PurchaseOrder.PONum04PO Num0010
+PurchaseOrder.POStatus01PO StatusOrdered050
+PurchaseOrder.ReceiveDate02Date Receivednull040
+PurchaseOrder.SupplierIDNum04Supplier ID0030
+PurchaseOrder.PONumindextruetrue1PONumtrue
+RefCalltable
+RefCall.CallDate02Call Datenull030
+RefCall.CallNum01Call Num010
+RefCall.CustNum04Cust Num0020
+RefCall.Parent01Parent050
+RefCall.SalesRep01Sales Rep040
+RefCall.Txt01Txt060
+RefCall.CallNumindextruetrue1CallNumtrue
+RefCall.CustNumindextruefalse2CustNumtrueCallNumtrue
+RefCall.Siblingindextruefalse2ParenttrueCallNumtrue
+RefCall.Txtindexfalsefalse1Txttrue
+SalesReptable
+SalesRep.MonthQuota124Month Quota0040
+SalesRep.Region01Region030
+SalesRep.RepName01Rep Name020
+SalesRep.SalesRep01Sales Rep01
+SalesRep.SalesRepindextruetrue1SalesReptrue
+ShipTotable
+ShipTo.Address01Address040
+ShipTo.Address201Address2050
+ShipTo.City01City060
+ShipTo.Comments01Comments0100
+ShipTo.Contact01Contact030
+ShipTo.CustNum04Cust Num0010
+ShipTo.Name01Name0110
+ShipTo.Phone01Phone090
+ShipTo.PostalCode01Postal Code080
+ShipTo.ShipToID04Ship To ID0020
+ShipTo.State01State070
+ShipTo.CustNumShipToindextruetrue2CustNumtrueShipToIDtrue
+Statetable
+State.Region01Region030
+State.State01State010
+State.StateName01State Name020
+State.Stateindextruetrue1Statetrue
+Suppliertable
+Supplier.Address01Address012
+Supplier.Address201Address2013
+Supplier.City01City014
+Supplier.Comments01Comments0180
+Supplier.Country01CountryUSA018
+Supplier.Discount04Discount00230
+Supplier.LoginDate02Login Datenull0200
+Supplier.Name01Name011
+Supplier.Password01Password1190
+Supplier.Phone01Phone0115
+Supplier.PostalCode01ZipCode017
+Supplier.ShipAmount04Ship Amount1000210
+Supplier.State01State015
+Supplier.SupplierIDNum04Supplier ID0010
+Supplier.SupplierIDindextruetrue1SupplierIDNumtrue
+SupplierItemXreftable
+SupplierItemXref.ItemNum04Item #0020
+SupplierItemXref.SupplierIDNum04Supplier ID0010
+SupplierItemXref.ItemNumSupplierIDindextruefalse2ItemNumtrueSupplierIDNumtrue
+SupplierItemXref.SupplieridItemNumindextruetrue2SupplierIDNumtrueItemNumtrue
+TimeSheettable
+TimeSheet.AMTimeIn01AM Time In040
+TimeSheet.AMTimeOut01AM Time Out050
+TimeSheet.DayRecorded02Day Recordednull020
+TimeSheet.EmpNum04Emp No0010
+TimeSheet.OvertimeHours05Overtime Hours0090
+TimeSheet.PMTimeIn01PM Time In060
+TimeSheet.PMTimeOut01PM Time Out070
+TimeSheet.RegularHours05Regular Hours0080
+TimeSheet.TypeRecorded01Type Recorded030
+TimeSheet.EmpNoDayRecordedindextruetrue2EmpNumtrueDayRecordedtrue
+Vacationtable
+Vacation.EmpNum04Emp No005
+Vacation.EndDate02End Datenull025
+Vacation.StartDate02Start Datenull015
+Vacation.EmpNoStartDateindextruetrue2EmpNumtrueStartDatetrue
+Warehousetable
+Warehouse.Address01Address040
+Warehouse.Address201Address2050
+Warehouse.City01City060
+Warehouse.Country01CountryUSA030
+Warehouse.Phone01Phone090
+Warehouse.PostalCode01Postal Code080
+Warehouse.State01State070
+Warehouse.WarehouseName01Warehouse Name020
+Warehouse.WarehouseNum04Warehouse Num0010
+Warehouse.WarehouseNameindexfalsefalse1WarehouseNametrue
+Warehouse.WarehouseNumindextruetrue1WarehouseNumtrue

@@ -1,0 +1,13 @@
+2023-07-10 21:58:46,398 [ERROR]  - An internal error occurred
+java.lang.NullPointerException
+	at com.openedge.pdt.core.ast.visitor.VisitorCreateBindings.processPostVisit(VisitorCreateBindings.java:446)
+	at com.openedge.pdt.core.ast.visitor.VisitorCreateBindings.postVisit(VisitorCreateBindings.java:465)
+	at com.openedge.pdt.core.ast.ProcedureDeclaration.accept(ProcedureDeclaration.java:26)
+	at com.openedge.pdt.core.ast.ASTNode.acceptChildren(ASTNode.java:336)
+	at com.openedge.pdt.core.ast.internal.CompilationUnit.accept(CompilationUnit.java:129)
+	at com.openedge.pdt.core.ast.internal.CompilationUnit.computeBindings(CompilationUnit.java:500)
+	at com.openedge.pdt.text.reconciler.ABLReconcileStrategy.postReconcileProcess(ABLReconcileStrategy.java:615)
+	at com.openedge.pdt.text.reconciler.ABLReconcileStrategy.reconcile(ABLReconcileStrategy.java:549)
+	at com.openedge.pdt.text.reconciler.ABLReconcileStrategy.reconcile(ABLReconcileStrategy.java:493)
+	at com.openedge.pdt.text.reconciler.ABLMonoReconciler.process(ABLMonoReconciler.java:69)
+	at com.openedge.pdt.text.reconciler.ABLAbstractReconciler$BackgroundThread.run(ABLAbstractReconciler.java:207)

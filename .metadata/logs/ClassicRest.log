@@ -1,0 +1,23 @@
+2023-07-10 21:58:46,392 [ERROR]  - An internal error occurred
+java.lang.NullPointerException
+	at com.openedge.pdt.core.ast.visitor.VisitorCreateBindings.processPostVisit(VisitorCreateBindings.java:446)
+	at com.openedge.pdt.core.ast.visitor.VisitorCreateBindings.postVisit(VisitorCreateBindings.java:465)
+	at com.openedge.pdt.core.ast.ProcedureDeclaration.accept(ProcedureDeclaration.java:26)
+	at com.openedge.pdt.core.ast.ASTNode.acceptChildren(ASTNode.java:336)
+	at com.openedge.pdt.core.ast.internal.CompilationUnit.accept(CompilationUnit.java:129)
+	at com.openedge.pdt.core.ast.internal.CompilationUnit.computeBindings(CompilationUnit.java:500)
+	at com.openedge.pdt.text.reconciler.ABLReconcileStrategy.postReconcileProcess(ABLReconcileStrategy.java:615)
+	at com.openedge.pdt.text.reconciler.ABLReconcileStrategy.reconcile(ABLReconcileStrategy.java:549)
+	at com.openedge.pdt.text.reconciler.ABLReconcileStrategy.reconcile(ABLReconcileStrategy.java:493)
+	at com.openedge.pdt.text.reconciler.ABLMonoReconciler.process(ABLMonoReconciler.java:69)
+	at com.openedge.pdt.text.reconciler.ABLAbstractReconciler$BackgroundThread.run(ABLAbstractReconciler.java:207)
+2023-07-10 23:46:22,719 [ERROR]  - An internal error occurred
+java.lang.NullPointerException
+	at com.progress.openedge.pdt.rest.util.RestUtil.generatePIDLFile(RestUtil.java:775)
+	at com.progress.openedge.pdt.rest.caf.RESTOEFileSelectionWizard$1.run(RESTOEFileSelectionWizard.java:122)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+2023-07-10 23:50:13,464 [ERROR]  - An internal error occurred
+java.lang.NullPointerException
+	at com.progress.openedge.pdt.rest.util.RestUtil.generatePIDLFile(RestUtil.java:775)
+	at com.progress.openedge.pdt.rest.caf.RESTOEFileSelectionWizard$1.run(RESTOEFileSelectionWizard.java:122)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)

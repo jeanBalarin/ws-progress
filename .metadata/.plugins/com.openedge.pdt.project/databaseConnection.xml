@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/databaseConnection.xsd">
+    <databaseconnection identifier="sports2020">
+        <name>sports2020</name>
+        <description/>
+        <physicalname>C:\OpenEdge\WRK\db\sports2020.db</physicalname>
+        <logicalname>sports2020</logicalname>
+        <aliases/>
+        <group/>
+        <host>localhost</host>
+        <service>50001</service>
+        <userID/>
+        <password/>
+        <connectionparameters/>
+        <SQLIdentifier>-1e1f774:18932a3e13a:-7feb</SQLIdentifier>
+        <autoStartServer>true</autoStartServer>
+        <serverParameters>-db C:\OpenEdge\WRK\db\sports2020.db -S 50001   </serverParameters>
+        <autoShutdownServer>false</autoShutdownServer>
+        <OEVersion>12.2</OEVersion>
+    </databaseconnection>
+</root>

@@ -1,0 +1,14 @@
+AutoIndentOnPaste=true
+addBlockLevelStmt=true
+addErrorhandling=true
+casekeywords=true
+compileonsave=true
+dbexpansion=true
+eclipse.preferences.version=1
+expansion=true
+keywordCasingAutomatic=true
+not.first.run=true
+preferences.migrated=12.2
+syntax.check.background=true
+syntax.check.details=true
+syntax.check.useoverlay=true
