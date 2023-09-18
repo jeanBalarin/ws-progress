@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+locationcom.progress.openedge.pdt.pasoe.server.runtime=C\:/Progress/OpenEdge
 oeExplorerConnectionColumns=0,1,2,3,4,5,6
 pasoe.firstrun=false
 server.publish.r.code=true

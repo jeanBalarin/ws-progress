@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<libraryinfo path="C:/Progress/OpenEdge/tty/OpenEdge.Core.pl" type="ProcedureLibrary" ModificationStamp="1688816862606" FullName="OpenEdge.Core.pl" lib_header_magic_number="2384638594569" lib_header_version="15">
+<libraryinfo path="C:/Progress/OpenEdge/tty/OpenEdge.Core.pl" type="ProcedureLibrary" ModificationStamp="1694690276587" FullName="OpenEdge.Core.pl" lib_header_magic_number="2384638594569" lib_header_version="15">
 	<procedures>
 		<relative path="OpenEdge/Core/XML">
 			<procedure name="saxreaderfacade" SourceFilePath="" RfilePath="C:/Progress/OpenEdge/tty/OpenEdge.Core.pl" isInsidePL="true" Offset="2366895" RelativePath="OpenEdge/Core/XML"></procedure>

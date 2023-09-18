@@ -11,5 +11,8 @@
     <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/customerController.pidl::com.progress.openedge.pdt.bpmbindings" name="customerController..pUpdate" produces="application/json" verb="PUT">
       <prgs:param name="codigo" type="PATH"/>
     </prgs:operation>
+    <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/customerController.pidl::com.progress.openedge.pdt.bpmbindings" name="customerController..pDelete" produces="application/json" verb="DELETE">
+      <prgs:param name="codigo" type="PATH"/>
+    </prgs:operation>
   </prgs:resource>
 </prgs:model>

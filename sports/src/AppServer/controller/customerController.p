@@ -31,7 +31,7 @@ PROCEDURE pFindAll:
     DO ON ERROR UNDO, LEAVE:
         RUN service/customerService.p PERSISTENT SET hService.
         IF VALID-HANDLE(hService) THEN DO:
-            RUN findAllCustomer IN hService (OUTPUT  DATASET dsCustomer, OUTPUT iCodeStatus).
+            RUN findAllCustomer IN hService (OUTPUT  DATASET dsCustomer BY-REFERENCE, OUTPUT iCodeStatus).
         END.
         ELSE DO:
             CREATE ttErro.
@@ -57,7 +57,7 @@ PROCEDURE findByID:
         IF VALID-HANDLE(hService) THEN 
         DO:
             RUN findByIdCustomer IN hService (INPUT Codigo,
-                                              OUTPUT DATASET dsCustomer, OUTPUT iCodeStatus).
+                                              OUTPUT DATASET dsCustomer BY-REFERENCE, OUTPUT iCodeStatus).
         END.
         ELSE 
         DO:
@@ -79,12 +79,15 @@ PROCEDURE pCreate:
     DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER NO-UNDO.
     DEFINE VARIABLE hService AS HANDLE NO-UNDO.
     
-    DO ON ERROR UNDO, LEAVE:
+    DO ON ERROR UNDO, LEAVE: 
         RUN service/customerService.p PERSISTENT SET hService.
         IF VALID-HANDLE(hService) THEN 
         DO:
-            RUN pCreateCustomer IN hService (   INPUT TABLE ttNewCustomer,
-                                                OUTPUT DATASET dsCustomer, 
+            FOR FIRST ttNewCustomer NO-LOCK:
+                MESSAGE "RECID CONTROLLER: "  RECID (ttNewCustomer).
+            END.
+            RUN pCreateCustomer IN hService (   INPUT TABLE ttNewCustomer BY-REFERENCE,
+                                                OUTPUT DATASET dsCustomer BY-REFERENCE , 
                                                 OUTPUT iCodeStatus).
         END.
         ELSE 
@@ -113,8 +116,8 @@ PROCEDURE pUpdate:
         IF VALID-HANDLE(hService) THEN 
         DO:
             RUN pUpdateCustomer IN hService (   INPUT  iCode,
-                                                INPUT  TABLE ttNewCustomer,
-                                                OUTPUT DATASET dsCustomer, 
+                                                INPUT  TABLE ttNewCustomer BY-REFERENCE,
+                                                OUTPUT DATASET dsCustomer BY-REFERENCE, 
                                                 OUTPUT iCodeStatus).
         END.
         ELSE 
@@ -145,7 +148,7 @@ PROCEDURE pDelete:
         IF VALID-HANDLE(hService) THEN DO:
             RUN pDeleteCustomer IN hService (
                     INPUT iCodigo,
-                    OUTPUT DATASET dsCustomer, 
+                    OUTPUT DATASET dsCustomer BY-REFERENCE, 
                     OUTPUT iCodeStatus
                 ).    
         END.
@@ -161,6 +164,7 @@ PROCEDURE pDelete:
                 MESSAGE ttErro.msg.
             END.
             FOR EACH ttResults:
+                MESSAGE "RECID CONTROLER: " RECID(ttResults).
                 MESSAGE ttResults.msg.
             END.
             RETURN.

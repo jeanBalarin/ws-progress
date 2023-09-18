@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<libraryinfo path="C:/Progress/OpenEdge/tty/prodict.pl" type="ProcedureLibrary" ModificationStamp="1688816862672" FullName="prodict.pl" lib_header_magic_number="2384638594569" lib_header_version="15">
+<libraryinfo path="C:/Progress/OpenEdge/tty/prodict.pl" type="ProcedureLibrary" ModificationStamp="1694690276649" FullName="prodict.pl" lib_header_magic_number="2384638594569" lib_header_version="15">
 	<procedures>
 		<relative path="prodict/mss/key">
 			<procedure name="constraint" SourceFilePath="" RfilePath="C:/Progress/OpenEdge/tty/prodict.pl" isInsidePL="true" Offset="7529988" RelativePath="prodict/mss/key"></procedure>

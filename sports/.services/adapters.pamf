@@ -66,6 +66,27 @@
   &lt;/mapping:mapOutput>&#xD;
   &lt;mapping:mapFault name=&quot;default_fault&quot;/>&#xD;
 &lt;/mapping:messageMapping></lm:properties>
+            <lm:properties name="_v1_customers_codigo::customerController..pDelete::DELETE">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;
+&lt;mapping:messageMapping xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:mapping=&quot;http://www.progress.com/caf/mapping1.0&quot; xmlns:metadata=&quot;http://www.progress.com/caf/mapping1.0/toolingMetadata&quot;>&#xD;
+  &lt;metadata:toolingMetadata xsi:type=&quot;metadata:toolingMetadata&quot;>&#xD;
+    &lt;metadata:mapInput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target/>&#xD;
+    &lt;/metadata:mapInput>&#xD;
+    &lt;metadata:mapOutput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target/>&#xD;
+    &lt;/metadata:mapOutput>&#xD;
+  &lt;/metadata:toolingMetadata>&#xD;
+  &lt;mapping:mapInput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${rest.pathparam['/v1/customers/{codigo};codigo']}&quot; target=&quot;${idl.param['iCodigo']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapInput>&#xD;
+  &lt;mapping:mapOutput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['iCodeStatus']}&quot; target=&quot;${http.statuscode}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['dsCustomer']}&quot; target=&quot;${http.body}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapOutput>&#xD;
+  &lt;mapping:mapFault name=&quot;default_fault&quot;/>&#xD;
+&lt;/mapping:messageMapping></lm:properties>
             <lm:properties name="_v1_customers_codigo::customerController..pUpdate::PUT">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;
 &lt;mapping:messageMapping xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:mapping=&quot;http://www.progress.com/caf/mapping1.0&quot; xmlns:metadata=&quot;http://www.progress.com/caf/mapping1.0/toolingMetadata&quot;>&#xD;
   &lt;metadata:toolingMetadata xsi:type=&quot;metadata:toolingMetadata&quot;>&#xD;

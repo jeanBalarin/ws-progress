@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <publish-info>
+  <server id="oepas1 in 01 (Progress Application Server for OpenEdge 12.2)" path="publish1.dat"/>
   <server id="Progress Application Server for OpenEdge jean-desktop.oepas1 - jean-desktop" path="publish0.dat"/>
 </publish-info>
