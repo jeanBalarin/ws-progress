@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<libraryinfo path="C:/GitHub/ws-progress/sports/src" type="PathEntry" ModificationStamp="1694732862135" FullName="src" lib_header_magic_number="2384638594569" lib_header_version="15">
+<libraryinfo path="C:/GitHub/ws-progress/sports/src" type="PathEntry" ModificationStamp="1695166325949" FullName="src" lib_header_magic_number="2384638594569" lib_header_version="15">
 	<procedures>
 		<relative path="AppServer/service">
 			<procedure name="customerService" SourceFilePath="C:/GitHub/ws-progress/sports/src/AppServer/service/customerService.p" RfilePath="C:/GitHub/ws-progress/sports/bin/service/customerService.r"></procedure>

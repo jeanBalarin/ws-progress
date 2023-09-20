@@ -26,12 +26,12 @@ PROCEDURE findAllCustomer:
     DEFINE OUTPUT PARAMETER DATASET FOR dsCustomer. // temporary table for data output
     DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER  NO-UNDO.
     
-    FOR EACH Customer NO-LOCK:
+    FOR EACH Customer NO-LOCK:  
         CREATE ttCustomer.
         BUFFER-COPY Customer TO ttCustomer.
     END.
-    
-    iCodeStatus = 200.
+     
+    iCodeStatus = 200. 
     RETURN. 
     
 END PROCEDURE.
@@ -192,23 +192,87 @@ PROCEDURE pDeleteCustomer:
     END.
 END PROCEDURE.
 
-
+// procedure retorna a consulta de clientes paginada para os testes de aprendizagem inicial da rotina.
 PROCEDURE findCustomerPage:
-    DEFINE INPUT PARAMETER pageSize AS INTEGER NO-UNDO.
-    DEFINE INPUT PARAMETER codPage  AS RECID   NO-UNDO.
-    DEFINE INPUT PARAMETER filter   AS CHARACTER NO-UNDO.
-    DEFINE OUTPUT PARAMETER DATASET FOR dsCustomer.
-    DEFINE QUERY qCust FOR Customer.
-    DEFINE DATA-SOURCE srcCustomer FOR QUERY qCust.
+    DEFINE INPUT PARAMETER inpPageSize AS INTEGER NO-UNDO.
+    DEFINE INPUT PARAMETER inpCodPage  AS INTEGER NO-UNDO.
+    DEFINE OUTPUT PARAMETER DATASET    FOR dsCustomer.
+    DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER NO-UNDO.
     
-    //vincula dinamicamente o buffer da page no dataset 
-    DATASET dsCustomer:SET-BUFFERS (BUFFER ttPage:HANDLE).
+    DEFINE VARIABLE cWhere AS CHARACTER NO-UNDO.
     
+    MESSAGE( " noo PARAMETRO ROWID ") .
+    
+    
+    MESSAGE( STRING(inpCodPage)).
+    
+    BUFFER  ttErro:FILL-MODE    = "NO-FILL".
+    BUFFER  ttResults:FILL-MODE = 'NO-FILL'.
+    BUFFER  ttPage:FILL-MODE    = "NO-FILL".
+    
+    // definição da query que vai fazer a consulta no banco
+    DEFINE DATA-SOURCE srcCustomer FOR Customer.
+    // attach do buffer da tt no data-source para carregar as informações.
     BUFFER ttCustomer:ATTACH-DATA-SOURCE (DATA-SOURCE srcCustomer:HANDLE).
     
     
-    
-    
+
+    // valor padrão para o bath-size da tt pai é 0 e indica que carregará todos os registros.
+    IF inpPageSize > 0 THEN DO:
+        BUFFER ttCustomer:BATCH-SIZE = inpPageSize.
+    END.
+    IF inpCodPage <> 0 THEN DO:
+        
+        FIND FIRST Customer NO-LOCK WHERE 
+            RECID(Customer) = inpCodPage.
+        IF AVAILABLE Customer THEN DO:
+            DATA-SOURCE srcCustomer:RESTART-ROWID = ROWID(Customer).    
+            MESSAGE 'achou o row id'
+            VIEW-AS ALERT-BOX.
+        END.
+        ELSE DO:
+            MESSAGE 'não achou'
+            VIEW-AS ALERT-BOX.
+            RETURN 'nok'.
+        END.
+    END.
+    DATASET dsCustomer:FILL (). 
+    CREATE ttPage.
+    IF CAN-FIND(FIRST ttCustomer ) THEN DO:
+        
+        IF DATA-SOURCE srcCustomer:NEXT-ROWID <> ? THEN DO:
+            FIND FIRST Customer NO-LOCK WHERE 
+                ROWID(Customer) = DATA-SOURCE srcCustomer:NEXT-ROWID  NO-ERROR.
+                
+            IF AVAILABLE Customer THEN DO:
+                ASSIGN 
+                    ttPage.nextPage = RECID(Customer) 
+                    ttPage.sizePage = inpPageSize.
+            END.       
+        END.
+        
+        DATASET dsCustomer:WRITE-JSON ("file", "c:\temp\teste-paginação1.json", TRUE).
+        
+    END.
+    ELSE DO:  
+        MESSAGE('não achou os dados').
+        ASSIGN  
+            ttPage.nextPage = ?
+            ttPage.sizePage = inpPageSize.
+    END.
+    iCodeStatus = 200.
+    RETURN "OK":U.
+    FINALLY:
+        // trata o detach da fonte de dados. 
+        BUFFER ttCustomer:DETACH-DATA-SOURCE ().    
+    END FINALLY.
 END PROCEDURE.
 
-
+CATCH e AS Progress.Lang.Error :
+    CREATE ttErro.
+    ASSIGN 
+        ttErro.msg     = e:GetMessage(1) 
+        ttErro.success = FALSE
+        ttErro.codStatus = 500.
+    RETURN "NOk":U.
+END CATCH.

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<libraryinfo path="C:/GitHub/ws-progress/sports" type="PathEntry" ModificationStamp="1694732862127" FullName="sports" lib_header_magic_number="2384638594569" lib_header_version="15">
+<libraryinfo path="C:/GitHub/ws-progress/sports" type="PathEntry" ModificationStamp="1695166325948" FullName="sports" lib_header_magic_number="2384638594569" lib_header_version="15">
 	<procedures>
 		<relative path="src/AppServer/controller">
 			<procedure name="customerController" SourceFilePath="C:/GitHub/ws-progress/sports/src/AppServer/controller/customerController.p" RfilePath="C:/GitHub/ws-progress/sports/bin/controller/customerController.r"></procedure>
@@ -20,7 +20,6 @@
 		</relative>
 		<relative path="bin/service">
 			<procedure name="testes" SourceFilePath="" RfilePath="C:/GitHub/ws-progress/sports/bin/service/testes.r"></procedure>
-			<procedure name="customerService" SourceFilePath="" RfilePath="C:/GitHub/ws-progress/sports/bin/service/customerService.r"></procedure>
 		</relative>
 		<relative path="PASOEContent/static/auth">
 			<procedure name="login" SourceFilePath="C:/GitHub/ws-progress/sports/PASOEContent/static/auth/login.html" RfilePath=""></procedure>

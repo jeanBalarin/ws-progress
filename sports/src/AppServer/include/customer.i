@@ -47,7 +47,8 @@ DEFINE TEMP-TABLE ttCustomer NO-UNDO SERIALIZE-NAME "Customers" LIKE ttNewCustom
     
 DEFINE TEMP-TABLE ttErro NO-UNDO SERIALIZE-NAME "Errors"
     FIELD msg     AS CHARACTER  SERIALIZE-NAME "message"
-    FIELD success AS LOGICAL    SERIALIZE-NAME "success".
+    FIELD success AS LOGICAL    SERIALIZE-NAME "success"
+    FIELD codStatus  AS INTEGER SERIALIZE-HIDDEN.
 
    
     
@@ -61,7 +62,7 @@ DEFINE TEMP-TABLE ttResults NO-UNDO SERIALIZE-NAME "results"
     
 DEFINE TEMP-TABLE ttPage NO-UNDO SERIALIZE-NAME "pages"
     FIELD sizePage AS INTEGER 
-    FIELD nextPage AS RECID.
+    FIELD nextPage AS INTEGER.
 
 ASSIGN 
     TEMP-TABLE ttNewCustomer:SCHEMA-MARSHAL = "NONE".
@@ -69,7 +70,7 @@ ASSIGN
     TEMP-TABLE ttErro:SCHEMA-MARSHAL        = "NONE". 
     TEMP-TABLE ttResults:SCHEMA-MARSHAL     = "NONE". 
  
-DEFINE DATASET dsCustomer SERIALIZE-HIDDEN FOR ttCustomer, ttErro, ttResults.
+DEFINE DATASET dsCustomer SERIALIZE-HIDDEN FOR ttCustomer, ttErro, ttResults, ttPage. 
     
 
 
