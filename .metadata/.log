@@ -10536,3 +10536,42 @@ Remove the unsupported parameter data types from the following procedure(s):  "p
 	at com.progress.openedge.pdt.rest.util.RestUtil.generatePIDLFile(RestUtil.java:796)
 	at com.progress.openedge.pdt.rest.caf.RESTOEFileSelectionWizard$1.run(RESTOEFileSelectionWizard.java:122)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2023-09-23 17:22:09.019 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.progress.openedge.pdt.rest 4 0 2023-09-23 17:37:10.447
+!MESSAGE Failed to extract zip: HTTP Error (500)
+
+!ENTRY com.openedge.pdt.server 4 0 2023-09-23 18:15:53.950
+!MESSAGE The runtime 12.2 for OpenEdge server oepas1 in monster (Progress Application Server for OpenEdge 12.2) is not installed at C:\Progress\OpenEdge
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-09-23 18:15:54.266
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.wst.server.core.internal.Server$StopJob
+!SESSION 2023-10-01 10:28:30.410 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.progress.openedge.pdt.rest 4 20001 2023-10-01 11:39:55.615
+!MESSAGE An internal error occurred
+!STACK 0
+com.progress.tools.caf.core.model.exception.CAFException: The service name already exists. Enter a different name.
+	at com.progress.tools.caf.adapter.rest.expose.ui.wizard.model.RestExposeConfigurationsGenerator.generateConfigurations(RestExposeConfigurationsGenerator.java:114)
+	at com.progress.openedge.pdt.rest.facet.RESTServiceCreationJob.run(RESTServiceCreationJob.java:67)
+	at com.progress.openedge.pdt.ablservice.facet.ABLRestServiceCreationJob.run(ABLRestServiceCreationJob.java:61)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.progress.openedge.pdt.ablservice 4 20001 2023-10-01 11:39:55.637
+!MESSAGE An internal error occurred
+!STACK 0
+java.lang.NullPointerException
+	at com.progress.openedge.pdt.ablservice.util.ABLServiceUtil.convertToSpecificServiceType(ABLServiceUtil.java:368)
+	at com.progress.openedge.pdt.ablservice.util.ABLServiceUtil.convertToSpecificServiceType(ABLServiceUtil.java:357)
+	at com.progress.openedge.pdt.ablservice.facet.ABLRestServiceCreationJob.run(ABLRestServiceCreationJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
