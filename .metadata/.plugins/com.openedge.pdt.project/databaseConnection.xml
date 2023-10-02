@@ -4,7 +4,7 @@
         <name>sports2020</name>
         <description/>
         <physicalname>C:\OpenEdge\WRK\db\sports2020.db</physicalname>
-        <logicalname>sports2020</logicalname>
+        <logicalname/>
         <aliases/>
         <group/>
         <host>localhost</host>
@@ -12,9 +12,9 @@
         <userID/>
         <password/>
         <connectionparameters/>
-        <SQLIdentifier>-1e1f774:18932a3e13a:-7feb</SQLIdentifier>
+        <SQLIdentifier>6a95b019:18af28ff846:-7feb</SQLIdentifier>
         <autoStartServer>true</autoStartServer>
-        <serverParameters>-db C:\OpenEdge\WRK\db\sports2020.db -S 50001   </serverParameters>
+        <serverParameters>-db C:\OpenEdge\WRK\db\sports2020.db -S 50001 </serverParameters>
         <autoShutdownServer>false</autoShutdownServer>
         <OEVersion>12.2</OEVersion>
     </databaseconnection>

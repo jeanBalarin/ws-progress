@@ -2,10 +2,4 @@
 <section name="Workbench">
 	<section name="content_assist_size_settings">
 	</section>
-	<section name="com.openedge.pdt.text.editor.actions.quickoutline">
-		<item key="saveLastFilterText" value="false"/>
-		<item key="lastFilter" value=""/>
-		<item key="com.openedge.pdt.text.editor.outline.ABLOutlineInformationControlDIALOG_USE_PERSISTED_SIZE" value="false"/>
-		<item key="com.openedge.pdt.text.editor.outline.ABLOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
-	</section>
 </section>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prgs:model xmlns:prgs="http://www.progress.com/caf/camel/component/prgrs" id="resourceModel">
+  <prgs:resource consumes="application/json" name="_customers" path="/customers" produces="application/json">
+    <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/customerController.pidl::com.progress.openedge.pdt.bpmbindings" name="customerController..pCreate" produces="application/json" verb="POST"/>
+    <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/customerController.pidl::com.progress.openedge.pdt.bpmbindings" name="customerController..pFindAll" produces="application/json" verb="GET">
+      <prgs:param name="PageSize" type="QUERY"/>
+      <prgs:param name="CodePage" type="QUERY"/>
+      <prgs:param name="Filter" type="QUERY"/>
+    </prgs:operation>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="_customers_codigo" path="/customers/{codigo}" produces="application/json">
+    <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/customerController.pidl::com.progress.openedge.pdt.bpmbindings" name="customerController..findByID" produces="application/json" verb="GET">
+      <prgs:param name="codigo" type="PATH"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/customerController.pidl::com.progress.openedge.pdt.bpmbindings" name="customerController..pUpdate" produces="application/json" verb="PUT">
+      <prgs:param name="codigo" type="PATH"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/customerController.pidl::com.progress.openedge.pdt.bpmbindings" name="customerController..pDelete" produces="application/json" verb="DELETE">
+      <prgs:param name="codigo" type="PATH"/>
+    </prgs:operation>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="_customers_findAll" path="/customers/findAll" produces="application/json"/>
+</prgs:model>

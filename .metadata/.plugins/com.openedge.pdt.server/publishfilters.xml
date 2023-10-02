@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<filters version="12.2">
-    <filter enabled="true" pattern=".*_cl\..*" servertype="com.openedge.pdt.server.appserver.server"/>
-    <filter enabled="true" pattern="\..*" servertype="com.openedge.pdt.server.appserver.server"/>
-</filters>

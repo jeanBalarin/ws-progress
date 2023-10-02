@@ -1,6 +1,5 @@
+PASOE_PLUGIN_ADMIN_LOGIN_STATE=OPENEDGE_EXPLORER_LOGIN_FAILED
 eclipse.preferences.version=1
 locationcom.progress.openedge.pdt.pasoe.server.runtime=C\:/Progress/OpenEdge
 oeExplorerConnectionColumns=0,1,2,3,4,5,6
 pasoe.firstrun=false
-server.publish.r.code=true
-server.publish.source.code=true

@@ -9,7 +9,7 @@
             <driverProperties Indexed="true"/>
         </driverProperties>
         <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
-            <string>-1e1f774:18932a3e13a:-7feb</string>
+            <string>6a95b019:18af28ff846:-7feb</string>
         </identifier>
         <name>sports2020</name>
         <password/>

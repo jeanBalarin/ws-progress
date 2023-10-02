@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<libraryinfo path="C:/Progress/OpenEdge/tty/dataadmin.pl" type="ProcedureLibrary" ModificationStamp="1695088578015" FullName="dataadmin.pl" lib_header_magic_number="2384638594569" lib_header_version="15">
+<libraryinfo path="C:/Progress/OpenEdge/tty/dataadmin.pl" type="ProcedureLibrary" ModificationStamp="1696287116867" FullName="dataadmin.pl" lib_header_magic_number="2384638594569" lib_header_version="15">
 	<procedures>
 		<relative path="darest">
 			<procedure name="delete_authenticationsystems" SourceFilePath="" RfilePath="C:/Progress/OpenEdge/tty/dataadmin.pl" isInsidePL="true" Offset="42" RelativePath="darest"></procedure>
