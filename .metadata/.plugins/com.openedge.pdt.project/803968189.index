@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<libraryinfo path="C:/GitHub/ws-progress/webServiceRest/PASOEContent/WEB-INF/openedge" type="PathEntry" ModificationStamp="1701739324642" FullName="openedge" lib_header_magic_number="2384638594569" lib_header_version="15">
+	<procedures>
+	</procedures>
+	<classes>
+		<pacakage name="">
+			<class name="teste" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/WEB-INF/openedge/teste.cls" RfilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/WEB-INF/openedge/teste.r" Abstract="false" Final="false" isInterface="false" isSerializable="false" SuperClassName="OpenEdge.Web.WebHandler" InterfaceNames="" ImportedPackages=""></class>
+			<class name="webServiceRestHandler" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/WEB-INF/openedge/webServiceRestHandler.cls" RfilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/WEB-INF/openedge/webServiceRestHandler.r" Abstract="false" Final="false" isInterface="false" isSerializable="false" SuperClassName="OpenEdge.Web.WebHandler" InterfaceNames="" ImportedPackages=""></class>
+		</pacakage>
+	</classes>
+</libraryinfo>

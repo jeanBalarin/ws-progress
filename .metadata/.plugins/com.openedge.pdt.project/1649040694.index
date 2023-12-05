@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<libraryinfo path="C:/GitHub/ws-progress/webServiceRest" type="PathEntry" ModificationStamp="1701739324669" FullName="webServiceRest" lib_header_magic_number="2384638594569" lib_header_version="15">
+	<procedures>
+		<relative path="PASOEContent/WEB-INF/home">
+			<procedure name="ServerStatus" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/WEB-INF/home/ServerStatus.html" RfilePath=""></procedure>
+			<procedure name="home" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/WEB-INF/home/home.html" RfilePath=""></procedure>
+		</relative>
+		<relative path="PASOEContent/static/error">
+			<procedure name="error401" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/error/error401.html" RfilePath=""></procedure>
+			<procedure name="error403" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/error/error403.html" RfilePath=""></procedure>
+			<procedure name="error404" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/error/error404.html" RfilePath=""></procedure>
+			<procedure name="error500" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/error/error500.html" RfilePath=""></procedure>
+			<procedure name="error503" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/error/error503.html" RfilePath=""></procedure>
+		</relative>
+		<relative path="PASOEContent/static/auth">
+			<procedure name="login" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/auth/login.html" RfilePath=""></procedure>
+			<procedure name="loginfail" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/auth/loginfail.html" RfilePath=""></procedure>
+			<procedure name="logout" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/auth/logout.html" RfilePath=""></procedure>
+		</relative>
+		<relative path="PASOEContent/static">
+			<procedure name="commonPageFooter" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/commonPageFooter.html" RfilePath=""></procedure>
+			<procedure name="commonPageHeader" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/commonPageHeader.html" RfilePath=""></procedure>
+			<procedure name="home" SourceFilePath="C:/GitHub/ws-progress/webServiceRest/PASOEContent/static/home.html" RfilePath=""></procedure>
+		</relative>
+	</procedures>
+	<classes>
+	</classes>
+</libraryinfo>

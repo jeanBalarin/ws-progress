@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publishHistory xmlns="urn:/progress/openedge/WebspeedPublishHistory/v1">
+    <service name="webServiceRestService">
+        <server id="oepas1 in monster (Progress Application Server for OpenEdge 12.2)">
+            <handler name="webServiceRestHandler">/webServiceRest,/teste</handler>
+        </server>
+    </service>
+</publishHistory>

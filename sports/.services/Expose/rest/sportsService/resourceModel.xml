@@ -9,9 +9,6 @@
     </prgs:operation>
   </prgs:resource>
   <prgs:resource consumes="application/json" name="_customers_codigo" path="/customers/{codigo}" produces="application/json">
-    <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/customerController.pidl::com.progress.openedge.pdt.bpmbindings" name="customerController..findByID" produces="application/json" verb="GET">
-      <prgs:param name="codigo" type="PATH"/>
-    </prgs:operation>
     <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/customerController.pidl::com.progress.openedge.pdt.bpmbindings" name="customerController..pUpdate" produces="application/json" verb="PUT">
       <prgs:param name="codigo" type="PATH"/>
     </prgs:operation>
@@ -19,5 +16,7 @@
       <prgs:param name="codigo" type="PATH"/>
     </prgs:operation>
   </prgs:resource>
-  <prgs:resource consumes="application/json" name="_customers_findAll" path="/customers/findAll" produces="application/json"/>
+  <prgs:resource consumes="application/json" name="_image" path="/image" produces="application/json">
+    <prgs:operation consumes="application/json" idls="sports/.services/src/AppServer/controller/GetImage/images.pidl::com.progress.openedge.pdt.bpmbindings" name="images..GetImage" produces="application/json" verb="GET"/>
+  </prgs:resource>
 </prgs:model>

@@ -1,0 +1,40 @@
+@openapi.openedge.export FILE(type="REST", executionMode="single-run", useReturnValue="false", writeDataSetBeforeImage="false").
+
+/*------------------------------------------------------------------------
+    File        : images.p
+    Purpose     : 
+
+    Syntax      :
+
+    Description : 
+
+    Author(s)   : franc
+    Created     : Thu Nov 30 19:39:57 BRT 2023
+    Notes       :
+  ----------------------------------------------------------------------*/
+
+/* ***************************  Definitions  ************************** */
+USING OpenEdge.Core.Memptr FROM PROPATH.
+
+BLOCK-LEVEL ON ERROR UNDO, THROW.
+
+/* ********************  Preprocessor Definitions  ******************** */
+
+
+/* ***************************  Main Block  *************************** */
+
+@openapi.openedge.export(type="REST", useReturnValue="false", writeDataSetBeforeImage="false").
+PROCEDURE GetImage:
+    DEFINE OUTPUT PARAMETER lcImage AS LONGCHAR.
+    DEFINE VARIABLE oPic AS CLASS  Memptr NO-UNDO.
+    DEFINE VARIABLE mData AS MEMPTR NO-UNDO.
+    
+    COPY-LOB FROM FILE "C:/temp/NewSmile1.png" TO mData.
+    oPic = NEW MEMPTR(mData). 
+    
+    lcImage = oPic:GetString(1).
+    MESSAGE 'imagem cenvertida' STRING(lcImage)
+    VIEW-AS ALERT-BOX.
+    RETURN.
+    
+END.

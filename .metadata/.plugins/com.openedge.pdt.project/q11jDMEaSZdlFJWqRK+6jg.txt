@@ -1,4 +1,4 @@
-PSC-SchemaCache|Tue Mar 17 22:09:13 2020|11.5.0
+PSC-SchemaCache|Sun Nov 26 16:30:03 2023|11.5.0
 Benefitstable
 Benefits.DependentCare04Dependent Care0070
 Benefits.EmpNum04Emp No0010
@@ -290,3 +290,22 @@ Warehouse.WarehouseName01Warehouse Name020
 Warehouse.WarehouseNum04Warehouse Num0010
 Warehouse.WarehouseNameindexfalsefalse1WarehouseNametrue
 Warehouse.WarehouseNumindextruetrue1WarehouseNumtrue
+user_bastable
+user_bas.active03activeno050
+user_bas.block_login03block_loginno060
+user_bas.date_pass034date_pass?090
+user_bas.dt_token034dt_token?0110
+user_bas.email01email070
+user_bas.first_name01first_name030
+user_bas.id041id0110
+user_bas.last_login034last_login?0130
+user_bas.last_name01last_name040
+user_bas.login01login120
+user_bas.nr_fail_login04nr_fail_login00120
+user_bas.password08null080
+user_bas.phone01phone?0140
+user_bas.token01TOKEN0100
+user_bas.unique_identification01id_un1150
+user_bas.id_loginindextruefalse1logintrue
+user_bas.id_unicindextruefalse1unique_identificationtrue
+user_bas.id_userindexfalsetrue1idtrue

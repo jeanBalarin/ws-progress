@@ -1,11 +1,14 @@
 <?xml version="1.0" ?>
-<libraryinfo path="C:/GitHub/ws-progress/sports/src" type="PathEntry" ModificationStamp="1696287116896" FullName="src" lib_header_magic_number="2384638594569" lib_header_version="15">
+<libraryinfo path="C:/GitHub/ws-progress/sports/src" type="PathEntry" ModificationStamp="1701739324706" FullName="src" lib_header_magic_number="2384638594569" lib_header_version="15">
 	<procedures>
 		<relative path="AppServer/service">
-			<procedure name="customerService" SourceFilePath="C:/GitHub/ws-progress/sports/src/AppServer/service/customerService.p" RfilePath=""></procedure>
+			<procedure name="customerService" SourceFilePath="C:/GitHub/ws-progress/sports/src/AppServer/service/customerService.p" RfilePath="C:/GitHub/ws-progress/sports/bin/service/customerService.r"></procedure>
 		</relative>
 		<relative path="AppServer/controller">
 			<procedure name="customerController" SourceFilePath="C:/GitHub/ws-progress/sports/src/AppServer/controller/customerController.p" RfilePath="C:/GitHub/ws-progress/sports/bin/controller/customerController.r"></procedure>
+		</relative>
+		<relative path="AppServer/controller/GetImage">
+			<procedure name="images" SourceFilePath="C:/GitHub/ws-progress/sports/src/AppServer/controller/GetImage/images.p" RfilePath="C:/GitHub/ws-progress/sports/bin/controller/GetImage/images.r"></procedure>
 		</relative>
 	</procedures>
 	<classes>

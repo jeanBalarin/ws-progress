@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module-content version="12.2">
+    <module id="ce9c38a7-089a-41c7-a264-b34c8c0e209b" name="webServiceRest">
+        <resource path="src\AppServer" publish="true"/>
+    </module>
+</module-content>

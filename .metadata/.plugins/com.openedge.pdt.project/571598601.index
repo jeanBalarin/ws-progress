@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<libraryinfo path="C:/Progress/OpenEdge/tty/adecomm.pl" type="ProcedureLibrary" ModificationStamp="1696287116885" FullName="adecomm.pl" lib_header_magic_number="2384638594569" lib_header_version="15">
+<libraryinfo path="C:/Progress/OpenEdge/tty/adecomm.pl" type="ProcedureLibrary" ModificationStamp="1701739324697" FullName="adecomm.pl" lib_header_magic_number="2384638594569" lib_header_version="15">
 	<procedures>
 		<relative path="adecomm">
 			<procedure name="as-utils" SourceFilePath="" RfilePath="C:/Progress/OpenEdge/tty/adecomm.pl" isInsidePL="true" Offset="42" RelativePath="adecomm"></procedure>

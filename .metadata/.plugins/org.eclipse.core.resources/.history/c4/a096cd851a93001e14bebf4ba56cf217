@@ -1,0 +1,161 @@
+ 
+ /*------------------------------------------------------------------------
+    File        : UserBas
+    Purpose     : implement the base user entity and its validations such as authentication and validating user groups
+    Syntax      : 
+    Description : 
+    Author(s)   : franc
+    Created     : Sun Nov 26 17:05:17 BRT 2023
+    Notes       : 
+  ----------------------------------------------------------------------*/
+
+USING Progress.Lang.*.
+USING entitties.user.*.
+
+BLOCK-LEVEL ON ERROR UNDO, THROW.
+
+CLASS entitties.user.UserBas: 
+    
+    DEFINE PUBLIC PROPERTY fisrtName AS CHARACTER NO-UNDO 
+    GET():
+        
+    END GET.
+    PRIVATE SET(INPUT arg AS CHARACTER):
+                
+    END SET.
+    
+    DEFINE PUBLIC PROPERTY lastName AS CHARACTER NO-UNDO 
+    GET.
+    PRIVATE SET.       
+    
+    DEFINE PUBLIC PROPERTY id AS INT64 NO-UNDO 
+    GET():
+        
+    END GET.
+    PRIVATE SET. 
+    
+    DEFINE PUBLIC PROPERTY login AS CHARACTER NO-UNDO 
+    GET():
+        
+    END GET.
+    PRIVATE SET. 
+    
+    DEFINE PUBLIC PROPERTY active AS LOGICAL NO-UNDO 
+    GET():
+        
+    END GET.
+    SET(INPUT arg AS LOGICAL):
+                
+    END SET.
+     
+    DEFINE PUBLIC PROPERTY blockLogin AS LOGICAL NO-UNDO 
+    GET():
+        
+    END GET.
+    SET(INPUT arg AS LOGICAL):
+                
+    END SET.
+    
+    DEFINE PUBLIC PROPERTY email AS CHARACTER NO-UNDO 
+    GET():
+        
+    END GET.
+    SET(INPUT arg AS CHARACTER):
+                
+    END SET.
+     
+    DEFINE PUBLIC PROPERTY passWord AS CHARACTER NO-UNDO 
+    PRIVATE GET.
+    SET. 
+    
+    DEFINE PUBLIC PROPERTY datePass AS DATETIME NO-UNDO 
+    GET():
+        
+    END GET.
+    PRIVATE SET(INPUT arg AS DATETIME):
+                
+    END SET.
+     
+    DEFINE PUBLIC PROPERTY token AS CHARACTER NO-UNDO 
+    PRIVATE GET():
+        
+    END GET.
+    SET(INPUT arg AS CHARACTER):
+                
+    END SET.
+    
+    DEFINE PUBLIC PROPERTY dateToken AS DATETIME NO-UNDO 
+    GET():
+        
+    END GET.
+    PRIVATE SET(INPUT arg AS DATETIME):
+                
+    END SET.
+    
+    DEFINE PUBLIC PROPERTY nrFailLogin AS INTEGER NO-UNDO 
+    GET():
+        
+    END GET.
+    SET(INPUT arg AS INTEGER):
+                
+    END SET.
+     
+    DEFINE PUBLIC PROPERTY lastLogin AS DATETIME NO-UNDO 
+    GET():
+        
+    END GET.
+    SET(INPUT arg AS DATETIME):
+                
+    END SET.
+            
+    DEFINE PUBLIC PROPERTY phone AS CHARACTER NO-UNDO 
+    GET():
+        
+    END GET.
+    PRIVATE SET(INPUT arg AS CHARACTER):
+                
+    END SET.
+     
+    DEFINE PUBLIC PROPERTY uniqueIdentification AS CHARACTER NO-UNDO 
+    GET.
+    SET.      
+    
+	/*------------------------------------------------------------------------------
+	 Purpose:
+	 Notes:
+	------------------------------------------------------------------------------*/
+
+	CONSTRUCTOR STATIC  UserBas (  ):
+		
+	END CONSTRUCTOR.
+
+    
+    CONSTRUCTOR PUBLIC UserBas (  ):
+        SUPER ().
+        
+    END CONSTRUCTOR.
+
+
+    METHOD PUBLIC entitties.user.UserBas Create(
+        INPUT pFisrtName           AS CHARACTER, 
+        INPUT pLastName            AS CHARACTER,
+        INPUT pLogin               AS CHARACTER,
+        INPUT phone                AS CHARACTER,
+        INPUT uniqueIdentification AS CHARACTER
+    ):
+        DEFINE VARIABLE newUser AS UserBas NO-UNDO.
+        
+        
+        
+            
+        RETURN newUser.
+    END METHOD.
+
+
+
+
+    DESTRUCTOR PUBLIC UserBas ( ):
+
+    END DESTRUCTOR.
+
+END CLASS.

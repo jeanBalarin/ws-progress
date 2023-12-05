@@ -1,0 +1,221 @@
+!SESSION 2023-10-05 19:53:17.053 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-10-05 19:58:52.169
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.openedge.pdt.server 4 0 2023-10-05 20:49:20.893
+!MESSAGE The runtime 12.2 for OpenEdge server oepas1 in monster (Progress Application Server for OpenEdge 12.2) is not installed at C:\Progress\OpenEdge
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-10-05 20:49:21.162
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.wst.server.core.internal.Server$StopJob
+!SESSION 2023-10-07 18:07:01.202 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.openedge.pdt.server 4 0 2023-10-07 22:17:58.442
+!MESSAGE The runtime 12.2 for OpenEdge server oepas1 in monster (Progress Application Server for OpenEdge 12.2) is not installed at C:\Progress\OpenEdge
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-10-07 22:17:58.710
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.wst.server.core.internal.Server$StopJob
+!SESSION 2023-11-30 19:01:02.570 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(com.openedge.pdt.text.editor.actions.gotomatchingbracket,Go to Matching Bracket,
+		Go to Matching Bracket,
+		Category(com.openedge.pdt.text.editor.actions,OpenEdge source commands,OpenEdge source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2af1983f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.openedge.pdt.text.editingscope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7ed70d91,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(com.openedge.pdt.text.editor.actions.checksyntax,Check Syntax,
+		Check the syntax of the current program,
+		Category(com.openedge.pdt.text.editor.actions,OpenEdge source commands,OpenEdge source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7dd6733b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.openedge.pdt.text.editingscope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,Toggle Comment,
+		Toggle Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12ee9ed3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(com.openedge.pdt.text.editor.actions.correctcase,Correct Case,
+		Fix case of source code,
+		Category(com.openedge.pdt.text.editor.actions,OpenEdge source commands,OpenEdge source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3478ccd1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.openedge.pdt.text.editingscope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,Format,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7285e44a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(com.openedge.pdt.text.editor.actions.fixindentation,Fix Indentation,
+		Fix line Indentation,
+		Category(com.openedge.pdt.text.editor.actions,OpenEdge source commands,OpenEdge source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c041e8a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.openedge.pdt.text.editingscope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,Format Active Elements,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5a7a07df,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(com.openedge.pdt.text.editor.actions.quickoutline,Quick Outline,
+		Show Quick Outline,
+		Category(com.openedge.pdt.text.editor.actions,OpenEdge source commands,OpenEdge source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@28165605,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.openedge.pdt.text.editingscope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@756c40f9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(com.openedge.pdt.text.editor.actions.singlelinecomment,Toggle Single Line Comment,
+		Toggle Single Line Comment,
+		Category(com.openedge.pdt.text.editor.actions,OpenEdge source commands,OpenEdge source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6980e090,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.openedge.pdt.text.editingscope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,Add Block Comment,
+		Add Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@634e4680,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(com.openedge.pdt.text.editor.actions.opendeclaration,Open Declaration,
+		Open the selected file,
+		Category(com.openedge.pdt.text.editor.actions,OpenEdge source commands,OpenEdge source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79729292,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.openedge.pdt.text.editingscope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6e8e6ecd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.open.file.from.source,Open Selection,
+		Open an editor on the selected link,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@e487ec,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(com.openedge.pdt.text.editor.actions.previousmember,Previous Member,
+		Add new property to the current program,
+		Category(com.openedge.pdt.text.editor.actions,OpenEdge source commands,OpenEdge source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@118fab36,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.openedge.pdt.text.editingscope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c045d97,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-30 20:33:26.627
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(com.openedge.pdt.text.editor.actions.nextmember,Next Member,
+		Add new property to the current program,
+		Category(com.openedge.pdt.text.editor.actions,OpenEdge source commands,OpenEdge source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61e1bcdc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.openedge.pdt.text.editingscope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@459e9ceb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY com.openedge.pdt.server 4 0 2023-11-30 22:35:25.529
+!MESSAGE The runtime 12.2 for OpenEdge server oepas1 in monster (Progress Application Server for OpenEdge 12.2) is not installed at C:\Progress\OpenEdge
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-11-30 22:35:25.826
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.wst.server.core.internal.Server$StopJob
+!SESSION 2023-12-04 22:17:45.686 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-12-04 22:17:59.280
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

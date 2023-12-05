@@ -44,31 +44,6 @@ PROCEDURE pFindAll:
     END FINALLY.
 END.
 
-@openapi.openedge.export(type="REST", useReturnValue="false", writeDataSetBeforeImage="false").
-PROCEDURE findByID:
-    DEFINE INPUT PARAMETER Codigo AS INTEGER NO-UNDO.
-    DEFINE OUTPUT PARAMETER DATASET FOR dsCustomer. // temporary table for data output
-    DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER  NO-UNDO.
-    DEFINE VARIABLE hService AS HANDLE NO-UNDO.
-
-    RUN service/customerService.p PERSISTENT SET hService.
-    IF VALID-HANDLE(hService) THEN 
-    DO:
-        RUN findByIdCustomer IN hService (INPUT Codigo,
-                                          OUTPUT DATASET dsCustomer BY-REFERENCE, OUTPUT iCodeStatus).
-    END.
-    ELSE 
-    DO:
-        CREATE ttErro.
-        ASSIGN
-            ttErro.msg     = 'Erro ao executar chamada a rotina de consulta'
-            ttErro.success = FALSE.
-    END.
-    FINALLY:
-        IF VALID-HANDLE(hService) THEN DELETE PROCEDURE hService.    
-    END FINALLY.
-
-END PROCEDURE.
 
 @openapi.openedge.export(type="REST", useReturnValue="false", writeDataSetBeforeImage="false").
 PROCEDURE pCreate:
@@ -163,36 +138,4 @@ PROCEDURE pDelete:
             END.
             RETURN.
         END FINALLY.
-END PROCEDURE.
-
-
-@openapi.openedge.export(type="REST", useReturnValue="false", writeDataSetBeforeImage="false").
-PROCEDURE pFindCustomerPag:
-    DEFINE INPUT PARAMETER inpPageSize AS INTEGER NO-UNDO.
-    DEFINE INPUT PARAMETER inpCodePage AS INTEGER NO-UNDO.
-    DEFINE OUTPUT PARAMETER iCodeStatus AS INTEGER NO-UNDO.
-    DEFINE OUTPUT PARAMETER DATASET FOR dsCustomer.
-    
-    
-    DEFINE VARIABLE hService AS HANDLE NO-UNDO.
-    
-    RUN service/customerService.p PERSISTENT SET hService.
-    
-    IF VALID-HANDLE(hService) THEN DO:
-        RUN findCustomerPage IN hService (INPUT inpPageSize, INPUT inpCodePage, OUTPUT DATASET dsCustomer, OUTPUT iCodeStatus).  
-        
-    END.
-    MESSAGE(RETURN-VALUE).
-    IF RETURN-VALUE <> "OK" THEN DO:
-        iCodeStatus = 500.
-        CREATE ttErro.
-        ASSIGN ttErro.msg = "Erro desconhecido!".    
-    END.   
-    RETURN.
-    FINALLY: 
-        
-        IF VALID-HANDLE(hService) THEN
-            DELETE PROCEDURE hService.
-            
-    END FINALLY.   
 END PROCEDURE.

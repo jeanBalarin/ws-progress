@@ -1,7 +1,10 @@
 <?xml version="1.0" ?>
-<libraryinfo path="C:/GitHub/ws-progress/sports/PASOEContent/WEB-INF/openedge" type="PathEntry" ModificationStamp="1696287116896" FullName="openedge" lib_header_magic_number="2384638594569" lib_header_version="15">
+<libraryinfo path="C:/GitHub/ws-progress/sports/PASOEContent/WEB-INF/openedge" type="PathEntry" ModificationStamp="1701739324707" FullName="openedge" lib_header_magic_number="2384638594569" lib_header_version="15">
 	<procedures>
 	</procedures>
 	<classes>
+		<pacakage name="">
+			<class name="teste" SourceFilePath="C:/GitHub/ws-progress/sports/PASOEContent/WEB-INF/openedge/teste.cls" RfilePath="C:/GitHub/ws-progress/sports/PASOEContent/WEB-INF/openedge/teste.r" Abstract="false" Final="false" isInterface="false" isSerializable="false" SuperClassName="OpenEdge.Web.WebHandler" InterfaceNames="" ImportedPackages=""></class>
+		</pacakage>
 	</classes>
 </libraryinfo>
